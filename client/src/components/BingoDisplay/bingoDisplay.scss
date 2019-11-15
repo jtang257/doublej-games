@@ -2,23 +2,84 @@
 
 .display {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 
     &__container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         position: relative;
         width: 90%;
         margin: 30px 35px 0 35px;
+        padding: 0 0 40px 0;
+        border-bottom: solid 0.5px lightgrey;
+    }
+
+    &__image-container {
+
     }
 
     &__image {
-        width: 70%;
+        width: 200px;
+        cursor: pointer;
+    }
+
+    &__words-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0 10px 0 10px;
+        margin: 0 0 0 10px;
     }
 
     &__words {
+        margin: 10px 0 0 0;
+        padding: 5px 0 0 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: $tertiary-colour;
+        color: white;
+        border-radius: 10px;
+
+        &:nth-child(1) {
+            margin: 0 0 0 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $tertiary-colour;
+            color: white;
+            background-color: $general-colour;
+            cursor: pointer;
+        }
+    }
+
+    &__presenter {
+        display: flex;
+        justify-content: center;
+        position: relative; 
+        width: 700px;
+        margin: 50px 0 0 0;
+    }
+
+    &__presenter-image {
+        width: 80%;
+        margin: 25px;
+    }
+
+    &__presenter-word-container {
+        display: flex;
+        justify-content: center;
         position: absolute;
-        top: 75px;
+        top: 60px;
+    }
+
+    &__presenter-word {
+        width: 400px;
+        font-size: 50px;
     }
 }

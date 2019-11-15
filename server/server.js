@@ -15,8 +15,8 @@ const data = require('./data');
 app.get('/getMyCard', (request, response) => {
     let cardList = [];
    
-    //pick 24 random words
-    for (i = 0; i < 24; i++) {
+    //pick 25 random words
+    for (i = 0; i < 25; i++) {
         let randomIndex = Math.floor(Math.random() * (words.length));
         let targetWord = words[randomIndex];
         cardList.push(targetWord);

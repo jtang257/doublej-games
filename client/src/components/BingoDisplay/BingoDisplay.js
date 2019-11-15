@@ -6,31 +6,37 @@ import presenter from '../../assets/presenter.png';
 import bingoSpinner from '../../assets/bingo-spinner.png';
 import displayScreen from '../../assets/display-screen.png';
 
+
 class BingoDisplay extends React.Component {
 
+    state = {
+        phrase : ""
+    }
+    
+    loadCallerCard = () => {
+        axios.get('https://corporatebs-generator.sameerkumar.website/')
+            .then(result => {
+                return this.displayWord(result.data)
+            })
+        }
 
-
-    displayWord = (event) => {
-        let content = event;
-        console.log(event);
+    displayWord = (data) => {
+        let words = data;
+        return words;
     }
 
+    
     render() {
-
         return(
             <>
             <Header />
             <div className="display">
-                <div className="display__container">
+                <div className="display__container" onClick={() => {this.loadCallerCard()}}>
                     <div className="display__image-container">
-                        <img className="display__image"src={bingoSpinner} onClick={null} />
+                        <img className="display__image" src={bingoSpinner} />
                     </div>
                     <div className="display__words-container">
-                        <div className="display__words" onClick={(e) => {this.displayWord(e)}}>☕ {this.props.words}</div>
-                        <div className="display__words" onClick={(e) => {this.displayWord(e)}}>☕ {this.props.words}</div>
-                        <div className="display__words" onClick={(e) => {this.displayWord(e)}}>☕ {this.props.words}</div>
-                        <div className="display__words" onClick={(e) => {this.displayWord(e)}}>☕ {this.props.words}</div>
-                        <div className="display__words" onClick={(e) => {this.displayWord(e)}}>☕ {this.props.words}</div>
+                        <div className="display__words">☕ {this.state.phrase}</div>
                     </div>
                 </div>
                 <div className="display__presenter">

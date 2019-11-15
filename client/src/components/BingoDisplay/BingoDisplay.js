@@ -16,7 +16,9 @@ class BingoDisplay extends React.Component {
     loadCallerCard = () => {
         axios.get('https://corporatebs-generator.sameerkumar.website/')
             .then(result => {
-                return this.displayWord(result.data)
+                this.setState({
+                    phrase : result.data.phrase
+                })
             })
         }
 
@@ -37,12 +39,6 @@ class BingoDisplay extends React.Component {
                     </div>
                     <div className="display__words-container">
                         <div className="display__words">☕ {this.state.phrase}</div>
-                    </div>
-                </div>
-                <div className="display__presenter">
-                    <img className="display__presenter-image" src={displayScreen} />
-                    <div className="display__presenter-word-container">
-                        <p className="display__presenter-word" ref="word">WORD MORE WORDS MORE WORDS</p>
                     </div>
                 </div>
             </div>

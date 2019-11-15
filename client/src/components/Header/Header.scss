@@ -1,0 +1,73 @@
+@import '../../styles/global.scss';
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 100px 0 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding: 0 0 30px 0;
+        border-bottom: solid 0.2px lightgrey;
+    }
+
+    &__title-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo-container {
+        width: 600px;
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__title-logo {
+        position: absolute;
+        top: 75px;
+        left: 235px;
+        font-size: 25px;
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 0 100px;
+    }
+
+    &__link {
+        width: 175px;
+        margin: 5px 0 0 0;
+        padding: 2.5px 5px 2.5px 5px;
+        text-align: center;
+        text-decoration: none;
+        border: solid 2px $general-colour;
+        border-radius: 5px;
+        
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $tertiary-colour;
+            color: white;
+            background-color: $general-colour;
+            cursor: pointer;
+        }
+
+        &:nth-child(2) {
+            margin: 5px 0 0 20px;
+        }
+    }
+
+
+
+
+}

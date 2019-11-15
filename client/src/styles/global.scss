@@ -1,0 +1,21 @@
+// colours
+
+$general-colour: black;
+$secondary-colour: #F7ECE1;
+$tertiary-colour: #FF776B;
+
+// fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+$font-main: 'Roboto Mono', monospace;
+
+*,*::before,*::after {
+    font-family: $font-main;
+}
+
+// layout
+
+body {
+    margin: 0;
+}

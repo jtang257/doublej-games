@@ -1,0 +1,15 @@
+@import '../../styles/global.scss';
+
+.help {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    &__arrow {
+        width: 100px;
+        position: absolute;
+        left: 265px;
+        top: -25px;
+    }
+}
+

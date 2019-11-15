@@ -1,0 +1,92 @@
+@import '../../styles/global.scss';
+
+.bingo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    background-color: $tertiary-colour;
+
+    &__title {
+        width: 680px;
+        margin: 20px 0 5px 0;
+        font-size: 70px;
+        letter-spacing: 120px;
+        color: $secondary-colour;
+    }
+
+    &__button-container {
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        margin: 20px 0 0 0;
+        border-radius: 50px;
+        border: none;
+        font-size: 30px;
+        color: $tertiary-colour;
+        background-color: white;
+
+        &:nth-child(2) {
+            margin: 20px 0 0 10px;
+            font-weight: bold;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $tertiary-colour;
+            color: white;
+            background-color: $general-colour;
+            cursor: pointer;
+        }
+    }
+
+    &__box-container {
+        width: 800px;
+        padding: 20px;
+    }
+
+    &__box-rounder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: white;
+    }
+
+    &__box {
+        width: 154px;
+        height: 154px;
+        border: solid black 2px;
+
+        &:nth-child(5n+1) {
+            border-left: white;
+        }
+        &:nth-child(5n+0) {
+            border-right: white;
+        }
+        &:nth-child(-n+5) {
+            border-top: white;
+        }
+        &:nth-child(n+21) {
+            border-bottom: white;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $tertiary-colour;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    &__caption {
+        color: white;
+    }
+}

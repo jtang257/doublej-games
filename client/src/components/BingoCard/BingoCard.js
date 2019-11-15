@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Header from '../Header/Header';
+import Card from '../Card/Card';
 import './bingoCard.scss';
 
 class BingoCard extends React.Component {
@@ -29,14 +30,8 @@ class BingoCard extends React.Component {
 
       boxGenerator = () => {
         return this.state.cardData.map((value) => {
-            return <div className="bingo-card__box">{value}</div>
+          return <Card value={value} />
         })
-      }
-
-    // highlighter
-
-      highlighter = () => {
-
       }
 
     render() {

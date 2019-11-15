@@ -21,13 +21,7 @@ class BingoDisplay extends React.Component {
                 })
             })
         }
-
-    displayWord = (data) => {
-        let words = data;
-        return words;
-    }
-
-    
+ 
     render() {
         return(
             <>
@@ -38,7 +32,7 @@ class BingoDisplay extends React.Component {
                         <img className="display__image" src={bingoSpinner} />
                     </div>
                     <div className="display__words-container">
-                        <div className="display__words">☕ {this.state.phrase}</div>
+                        <div className="display__words">{this.state.phrase}</div>
                     </div>
                 </div>
             </div>

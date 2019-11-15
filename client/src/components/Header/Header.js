@@ -14,7 +14,7 @@ class Header extends React.Component {
                                 <img src={logo} className="header__logo" alt="logo" />
                             </div>
                         </Link>
-                        <h1 className="header__title-logo">CORPORATE LINGO BINGO</h1>
+                        <h1 className="header__title-logo">CORPORATE LINGO BINGO ☕</h1>
                     </div>
                     <div className="header__navigation">
                         <Link to="/card" className="header__link">CARD</Link>

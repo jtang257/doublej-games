@@ -8,20 +8,18 @@ import BingoCard from './components/BingoCard/BingoCard.js';
 import BingoDisplay from './components/BingoDisplay/BingoDisplay.js';
 import Landing from './components/Landing/Landing.js';
 
-// api call 
-axios
-  .get('http://localhost:7700/getMyCard')
-    .then(result => {
-      console.log(result);  
-    })
+
 class App extends React.Component {
+
+
+
   render() {
     return(
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component ={Landing} />
           <Route path="/card" exact component={BingoCard} />
-          <Route path="/display" component={BingoDisplay} />
+          <Route path="/display" exact component={BingoDisplay} />
         </Switch>
       </BrowserRouter>
     )

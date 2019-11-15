@@ -60,9 +60,15 @@
     }
 
     &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0 4px 0 4px;
         width: 154px;
         height: 154px;
         border: solid black 2px;
+        text-align: center;
 
         &:nth-child(5n+1) {
             border-left: white;
